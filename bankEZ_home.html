@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>BankEZ HOME</title>
+    <link rel="icon" type="image/x-icon" href="favicon_10.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <link rel="stylesheet" href="style_main.css">
+    <link rel="stylesheet" href="style_footer.css">
+    <link rel="stylesheet" href="style_card.css"> 
+</head>
+<style>
+  /* responsive Image Gallery on homepage */
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive-gallery {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 1048px) {
+  .responsive-gallery {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .responsive-gallery {
+    width: 100%;
+  }
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/*end of responsive Image Gallery styling on homepage */
+
+</style>
+<body>
+  <div class="topHeader">
+    <h1 id="top_title">BankEZ</h1>
+    <h4 id="top_slogan">Ease Your Mind With Easy Banking</h4>    
+  </div>
+  <div class="header">
+        <div class="navbar">
+            <div class="nav-logo-bar">
+                <!-- <a href="#" class="nav-logo">GOLD</a> -->
+                <i class='fa fa-home' style='font-size:30px; color:white'></i>
+                <div class="hamburger">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="bankEZ_register.html" class="nav-link">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a href="bankEZ_login.html" class="nav-link">Log In</a>
+                </li>
+                <li class="nav-item">
+                    <a href="bankEZ_about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="bankEZ_contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+      <div class="main">
+        <br>
+         <h3 align="center" style="color: rgb(68, 67, 67)">Make life easier with our online and mobile banking</h3>                 
+         <br>
+         <div class="responsive-gallery">
+             <div class="gallery">
+               <a target="_blank" href="mobilebanking.jpg">
+                 <img src="mobilebanking.jpg" alt="Digital Banking" width="600" height="400">
+               </a>
+               <div class="desc">Explore digital solutions</div>
+             </div>
+         </div>
+         <div class="responsive-gallery">
+          <div class="gallery">
+            <a target="_blank" href="digital_bankingThree.jpg">
+              <img src="digital_bankingThree.jpg" alt="Money Management" width="600" height="400">
+            </a>
+            <div class="desc">Banking that travels with you</div>
+          </div>
+      </div>     
+           
+         <div class="responsive-gallery">
+             <div class="gallery">
+               <a target="_blank" href="child_banking_three.jpg">
+                 <img src="child_banking_three.jpg" alt="Cloud Banking" width="600" height="400">
+               </a>
+               <div class="desc">Check out our child Pocket Money app</div>
+             </div>
+         </div>
+           
+         <div class="responsive-gallery">
+             <div class="gallery">
+               <a target="_blank" href="bankCloud.jpg">
+                 <img src="bankCloud.jpg" alt="Online Banking" width="600" height="400">
+               </a>
+               <div class="desc">Discover ways to better manage your money</div>
+             </div>
+         </div>
+           
+         <div class="clearfix"></div>
+         <!--
+         <button onclick="changeImage('back')"> < </button>
+         <button onclick="changeImage('next')"> > </button>
+         -->
+         <br>
+         <br>
+        <marquee style="color:rgb(226, 85, 231); font-size: 1.8rem; font-style: italic; font-weight: bold;" width="100%" direction="left" height="100px" behavior="scroll" scrollamount="12">
+              For a limited time, enjoy $50 when you open an account with us! Offer ends October 31, 2024. Open an account online or come visit us today! 
+              </marquee>
+        <br>
+        <!--
+        <h3>Task list</h3>
+        <ol>
+          <li>- Work on footer position - not working quite right on some pages, particularly on small viewing platform</li>
+          <li>- Functionality for registering/login/local storage/banking transaction</li>
+          <li>- Add active, visited, hover state colors on links</li>
+          <li>- Add/Clean up commments</li>
+          <li>- Clean up CSS for different sections</li>
+          <li>- Add online banking app to download mobile banking</li>
+          <li>- Add Search button on right hand corner of topHeader</li>
+          <li>- Add Bank Easy logo on left hand corner of topHeader</li>
+          <li>- Add login button on body content for accessibility</li>        
+        </ol>
+        -->
+        
+     </div>
+ </div>
+    <!--Footer section-->
+    <div class="footer">
+      <div class="grid-container">
+        <div class="item2">
+          <!-- Add font awesome icons-->
+          <a href="https://www.facebook.com/" class='fa-brands fa-facebook'></a>
+          <a href="https://twitter.com/" class="fa-brands fa-twitter"></a>
+          <a href="https://www.linkedin.com/" class="fa-brands fa-linkedin"></a>
+          <a href="https://www.google.com/" class="fa-brands fa-google"></a>
+          <a href="https://www.instagram.com/" class="fa-brands fa-instagram"></a>
+        </div>
+        <div class="item3">
+              <text><a href="#">Privacy Policy</a></text>
+              <text><a href="#">Sitemap</a></text>
+              <text><a href="#">Equal Housing Lender</a></text>
+              <text><a href="https://winter2024.uoadev.com/pages/yein-f/index.html">Yein Index Page</a></text>
+        </div>
+        <div class="item4">
+          <text>Copyright @2024 BankEZ</text>
+        </div>
+      </div>
+    </div>
+  <script>
+/*
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+  */
+  </script>
+  <script src="script.js"></script> 
+</body>
+</html>

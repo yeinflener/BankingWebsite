@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>BankEZ Login</title>
+    <link rel="icon" type="image/x-icon" href="../../image/favicon_10.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style_main.css">
+    <link rel="stylesheet" href="style_form.css">
+    <link rel="stylesheet" href="style_footer.css">
+ 
+    <style>        
+    </style>
+</head>
+<body>
+    <div class="topHeader">
+        <h1 id="top_title">BankEZ</h1>
+        <h4 id="top_slogan">Ease Your Mind With Easy Banking</h4>    
+    </div>
+    <div class="header">
+        <div class="navbar">
+            <div class="nav-logo-bar">
+                <a href="bankEZ_home.html" class="nav-logo"><i class='fas fa-home' style='font-size:30px; color: white;'></i></a>   
+                <div class="hamburger">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="bankEZ_register.html" class="nav-link">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a href="bankEZ_login.html" class="nav-link">Log In</a>
+                </li>
+                <li class="nav-item">
+                    <a href="bankEZ_about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="bankEZ_contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="main">
+            <br>
+            <h1 style="color: #64532d; font-weight: 700">LOG IN PAGE</h1>
+            <!--
+            <div class="img" style = "height:200px;">ImageOne</div>
+            -->            
+            <div class="container">
+                <h1 align="center">Login</h1>
+                <label for="bankUserName">Username:</label>
+                <input type="text" id="bankUserName">
+                <br>
+                <br>
+                <label for="bankPass">Password:</label>
+                <input type="password" id="bankPass">
+                <br>
+                <br>
+                <button id="submitButton" onclick="validateLogin()">Submit</button>
+                <br>
+                <br>
+                <p align="center">Don't have an account? Sign up <a href="bankEZ_register.html">Here</a></p>
+            </div>
+        </div>
+    </div>
+    <!--Footer section-->
+    <div class="footer">
+        <div class="grid-container">
+          <div class="item2">
+            <!-- Add font awesome icons-->
+            <a href="https://www.facebook.com/" class='fa-brands fa-facebook'></a>
+            <a href="https://twitter.com/" class="fa-brands fa-twitter"></a>
+            <a href="https://www.linkedin.com/" class="fa-brands fa-linkedin"></a>
+            <a href="https://www.google.com/" class="fa-brands fa-google"></a>
+            <a href="https://www.instagram.com/" class="fa-brands fa-instagram"></a>
+          </div>
+          <div class="item3">
+                <text><a href="#">Privacy Policy</a></text>
+                <text><a href="#">Sitemap</a></text>
+                <text><a href="#">Equal Housing Lender</a></text>
+                <text><a href="https://winter2024.uoadev.com/pages/yein-f/index.html">Yein Index Page</a></text>
+          </div>
+          <div class="item4">
+            <text>Copyright @2024 BankEZ</text>
+          </div>
+        </div>
+      </div>
+        <script src="script.js"></script> 
+    <script>
+        function validateLogin(){
+            //Get username and password that user has entered
+            var uName = document.getElementById("bankUserName").value.toLowerCase();            
+            var pass = document.getElementById("bankPass").value;
+            
+            //check if the username exists in local storage
+            if(localStorage.getItem(uName)){
+                //Check if the user entered the correct password
+                if(localStorage.getItem(uName) == pass){
+                    sessionStorage.setItem("activeUser", uName);
+                    //Set a key in session storage to track that user has logged in
+                    sessionStorage.setItem("login", "true");
+                    window.location.replace("bankEZ_account.html");
+                }
+                else{
+                    alert("Incorrect Password Entered");
+                }
+            }
+            else{
+                alert("Username not found");
+            }
+        }
+    </script>
+    <script src="script.js"></script> 
+</body>
+</html>

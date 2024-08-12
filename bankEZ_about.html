@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>BankEZ About</title>
+    <link rel="icon" type="image/x-icon" href="../../image/favicon_10.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style_main.css">
+    <link rel="stylesheet" href="style_footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+ 
+      #grid_card {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 5px;
+        background-color: none;
+        padding: 30px;
+        border-radius: 25px;
+        width: 80%;
+        margin: auto;
+      }
+      .about_card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        width: 80%;
+        height: 275px;
+        border-radius: 20px;
+        margin: auto;
+      }
+      
+      .about_card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      }
+
+      .item_icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 125px;
+        width: 70%;
+      }
+      .item_icon>div {
+        width: 50px;
+        height: 50px;
+      }
+      /*
+      .item_desc {
+        border: 1px solid green;
+      }
+
+      .box_icon {
+        border: 1px solid black
+      }
+
+      /* Use a media query to add a breakpoint at 1048px changing grid display to 2 columns */
+  @media screen and (max-width: 1200px) {
+    #grid_card {
+      grid-template-columns: 1fr 1fr 1fr;
+      width: 90%;
+    }
+  }
+
+  @media screen and (max-width: 1087px) {
+    #grid_card {
+      grid-template-columns: 1fr 1fr;
+      width: 90%;
+    }
+  }
+
+  /* Use a media query to add a breakpoint at 700px changing grid display to 1 column*/
+  @media screen and (max-width: 700px) {
+    #grid_card {
+      grid-template-columns: 1fr;
+    }
+
+  }
+</style>
+</style>
+</head>
+<body>
+    <div class="topHeader">
+          <h1 id="top_title">BankEZ</h1>
+          <h4 id="top_slogan">Ease Your Mind With Easy Banking</h4>    
+    </div>
+    <div class="header">
+        <div class="navbar">
+            <div class="nav-logo-bar">                              
+                <a href="bankEZ_home.html" class="nav-logo"><i class='fa fa-home' style='font-size:30px; color: white;'></i></a>             
+                <div class="hamburger">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="bankEZ_register.html" class="nav-link">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a href="bankEZ_login.html" class="nav-link">Log In</a>
+                </li>
+                <li class="nav-item">
+                    <a href="bankEZ_about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="bankEZ_contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="main">
+          <br>
+          <h1 style="color: #64532d; font-weight: 700">OUR SERVICES</h1>
+          <p>What would you like to do? Let us help you</p>
+            <!--
+            <div class="img" style = "height:200px;">ImageOne</div>
+            -->          
+          <br>
+          <div id="grid_card">
+            <div class="about_card">
+              <text id="item_icon"><i class='fas fa-car' style='font-size:60px; color:rgb(94, 92, 92)'></i></text><br>
+              <text id="item_desc">Get a vehicle loan</text>
+            </div>
+            <div class="about_card">
+              <text id="item_icon"><i class='fas fa-chart-line' style='font-size:60px; color:rgb(94, 92, 92)'></i></text><br>
+              <text id="item_desc">Grow my investment</text>
+            </div>
+            <div class="about_card">
+              <text id="item_icon"><i class='fas fa-home' style='font-size:60px; color:rgb(94, 92, 92)'></i></text><br>
+              <text id="item_desc">Get a house loan</text>
+            </div>
+            <div class="about_card">
+              <text id="item_icon"><i class='fas fa-coins' style='font-size:60px; color:rgb(94, 92, 92)'></i></text><br>
+              <text id="item_desc">Open a checking account</text>
+            </div>
+            <div class="about_card">
+              <text id="item_icon"><i class='fas fa-piggy-bank' style='font-size:60px; color:rgb(94, 92, 92)'></i></text><br>
+              <text id="item_desc">Open a savings account</text>
+            </div>
+            <div class="about_card">
+              <text id="item_icon"><i class='fa-solid fa-seedling' style='font-size:60px; color:rgb(94, 92, 92)'></i></text><br>
+              <text id="item_desc">Save for retirement</text>
+            </div>
+            <div class="about_card">
+              <text id="item_icon"><i class='fa fa-credit-card' style='font-size:60px; color:rgb(94, 92, 92)'></i></text><br>
+              <text id="item_desc">Get a credit card</text>
+            </div>
+            <div class="about_card">
+              <text id="item_icon"><i class='fa-solid fa-briefcase' style='font-size:60px; color:rgb(94, 92, 92)'></i></text><br>
+              <text id="item_desc">Get a business loan</text>
+            </div>        
+          </div>
+        </div>
+    </div>
+    <!--Footer section-->
+    <div class="footer">
+        <div class="grid-container">
+          <div class="item2">
+            <!-- Add font awesome icons-->
+            <a href="https://www.facebook.com/" class='fa-brands fa-facebook'></a>
+            <a href="https://twitter.com/" class="fa-brands fa-twitter"></a>
+            <a href="https://www.linkedin.com/" class="fa-brands fa-linkedin"></a>
+            <a href="https://www.google.com/" class="fa-brands fa-google"></a>
+            <a href="https://www.instagram.com/" class="fa-brands fa-instagram"></a>
+          </div>
+          <div class="item3">
+                <text><a href="#">Privacy Policy</a></text>
+                <text><a href="#">Sitemap</a></text>
+                <text><a href="#">Equal Housing Lender</a></text>
+                <text><a href="https://winter2024.uoadev.com/pages/yein-f/index.html">Yein Index Page</a></text>
+          </div>
+          <div class="item4">
+            <text>Copyright @2024 BankEZ</text>
+          </div>
+        </div>
+      </div>
+    <script>
+    </script>
+        <script src="script.js"></script> 
+</body>
+</html>

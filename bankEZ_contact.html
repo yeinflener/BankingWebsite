@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>BankEZ Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style_main.css">
+    <link rel="stylesheet" href="style_form.css">
+    <link rel="stylesheet" href="style_footer.css">
+
+</head>
+<body>
+  <div class="topHeader">
+    <h1 id="top_title">BankEZ</h1>
+    <h4 id="top_slogan">Ease Your Mind With Easy Banking</h4>    
+</div>
+    <div class="header">
+        <div class="navbar">
+            <div class="nav-logo-bar">
+              <a href="bankEZ_home.html" class="nav-logo"><i class='fa fa-home' style='font-size:30px; color: white;'></i></a>   
+                <div class="hamburger">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="bankEZ_register.html" class="nav-link">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a href="bankEZ_login.html" class="nav-link">Log In</a>
+                </li>
+                <li class="nav-item">
+                    <a href="bankEZ_about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="bankEZ_contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+         <div class="main">
+          <br>
+            <h1 style="color: #64532d; font-weight: 700">QUESTIONS OR CONCERNS?</h1>
+            <p>We want to hear from you.</p>
+            <!--
+            <div class="img" style = "height:200px;">ImageOne</div>
+            pattern="/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/" -- email adress
+            pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" -- phone
+            -->            
+            <div class="container">
+                <form method="post" action="" name="contact-form"></form>
+                  <h1 align="center">Contact Us</h1>
+                  <br>            
+                  <label for="fname" name="fname">First Name</label>
+                  <br>
+                  <input type="text" name="fname" id="fname" required placeholder="Please enter first name"">
+                  <label for="lname" name="lname">Last Name</label>
+                  <br>
+                  <input type="text" name="lname" id="lname" required placeholder="Please enter last name">
+                  
+                  <label for="email" name="email">Email</label>
+                    <input type="email" name="email" id="email" required placeholder="Please enter email address">             
+                 
+                <label for="phone" name="phone">Phone Number</label>
+                    <input type="text" name="phone" id="phone"  required placeholder="Please enter phone number">                           
+                  <div id="inputBox">
+                    <textarea name="message" id="message" rows="6" placeholder="Enter your message ..."></textarea>        
+                  </div>
+                  <br>
+                  <input type="submit" id="submit" value="Submit">
+              </form>
+            </div>
+        </div>
+    </div>
+    <!--Footer section-->
+    <div class="footer">
+      <div class="grid-container">
+        <div class="item2">
+          <!-- Add font awesome icons-->
+          <a href="https://www.facebook.com/" class='fa-brands fa-facebook'></a>
+          <a href="https://twitter.com/" class="fa-brands fa-twitter"></a>
+          <a href="https://www.linkedin.com/" class="fa-brands fa-linkedin"></a>
+          <a href="https://www.google.com/" class="fa-brands fa-google"></a>
+          <a href="https://www.instagram.com/" class="fa-brands fa-instagram"></a>
+        </div>
+        <div class="item3">
+              <text><a href="#">Privacy Policy</a></text>
+              <text><a href="#">Sitemap</a></text>
+              <text><a href="#">Equal Housing Lender</a></text>
+              <text><a href="https://winter2024.uoadev.com/pages/yein-f/index.html">Yein Index Page</a></text>
+        </div>
+        <div class="item4">
+          <text>Copyright @2024 BankEZ</text>
+        </div>
+      </div>
+    </div>
+      <script src="script.js"></script> 
+    <script>
+
+      //ignore this section. Just a trial
+      const scriptURL = "https://script.google.com/macros/s/AKfycbxpHCWpmIATZmFfXd_aCB_SfeqplMFOXe6t-d-xVpcj2RIjEpU854-EZxfSM7q97wDo/exec";
+ 
+      const form = document.forms['contact-form']
+
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert("Thank you! Your form is submitted successfully." ))
+        .then(() => { window.location.reload(); })
+        .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+    <script src="script.js"></script> 
+</body>
+</html>

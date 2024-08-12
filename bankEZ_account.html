@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>BankEZ Account</title>
+    <link rel="icon" type="image/x-icon" href="../../image/favicon_10.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style_main.css">
+    <link rel="stylesheet" href="style_form.css">
+    <link rel="stylesheet" href="style_footer.css">
+    <link rel="stylesheet" href="style_card.css">
+ 
+    <style>
+        #welcomeMessage {
+            display: none;
+        }
+        .container {
+            width: 65%;
+        }
+
+        @media screen and (max-width: 1098px){
+            .container {
+            width: 80%;
+            }
+            h1 {
+            font-size: x-large;
+            }
+        }
+
+        @media screen and (max-width: 768px){
+        .container {
+            width: 90%;
+            }
+            h1 {
+            font-size: large;
+            }
+        }
+    
+    </style>
+</head>
+<body>
+  <div class="topHeader">
+    <h1 id="top_title">BankEZ</h1>
+    <h4 id="top_slogan">Ease Your Mind With Easy Banking</h4>    
+</div>
+    <div class="header">
+        <div class="navbar">
+            <div class="nav-logo-bar">
+              <a href="bankEZ_home.html" class="nav-logo"><i class='fa fa-home' style='font-size:30px; color: white;'></i></a>   
+                <div class="hamburger">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="bankEZ_register.html" class="nav-link">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a href="bankEZ_login.html" class="nav-link">Log In</a>
+                </li>
+                <li class="nav-item">
+                    <a href="bankEZ_about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="bankEZ_contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+         <div class="main">
+            <h1 id="welcomeMessage"></h1>
+            <!--
+            <div class="img" style = "height:200px;">ImageOne</div>
+            -->            
+            <div class="container" id="wrapper">
+                <h1 align="center" id="usernameBankHeader">Username Bank Account</h1><br>
+                <h2 align="center" id="balance">$$$$</h2>
+                <br>
+                <label for="deposit">Deposit:</label>
+                <input type="number" id="deposit">
+                <br>
+                <br>
+                <label for="withdraw">Withdraw:</label>
+                <input type="number" id="withdraw">
+                <br>
+                <br>
+                <button id="submitButton" onclick="updateBalance()">Submit</button>
+                <br>
+                <br>
+                <button id="logOutButton" onclick="logOut()">Log out</button>
+            </div>
+        </div>
+    </div>
+    <!--Footer section-->
+    <div class="footer">
+        <div class="grid-container">
+          <div class="item2">
+            <!-- Add font awesome icons-->
+            <a href="https://www.facebook.com/" class='fa-brands fa-facebook'></a>
+            <a href="https://twitter.com/" class="fa-brands fa-twitter"></a>
+            <a href="https://www.linkedin.com/" class="fa-brands fa-linkedin"></a>
+            <a href="https://www.google.com/" class="fa-brands fa-google"></a>
+            <a href="https://www.instagram.com/" class="fa-brands fa-instagram"></a>
+          </div>
+          <div class="item3">
+                <text><a href="#">Privacy Policy</a></text>
+                <text><a href="#">Sitemap</a></text>
+                <text><a href="#">Equal Housing Lender</a></text>
+                <text><a href="https://winter2024.uoadev.com/pages/yein-f/index.html">Yein Index Page</a></text>
+          </div>
+          <div class="item4">
+            <text>Copyright @2024 BankEZ</text>
+          </div>
+        </div>
+      </div>
+
+       <script src="script.js"></script> 
+    <script>
+        var username = sessionStorage.getItem("activeUser");
+    var fname = localStorage.getItem(username + "_firstname");
+    var lname = localStorage.getItem(username + "_lastname");
+
+    //check if user has logged in
+    if(sessionStorage.getItem("login") == "true") {
+      //Put the users name in the header
+      document.getElementById("welcomeMessage").style.display = "block";
+      document.getElementById("welcomeMessage").innerHTML = "Welcome " + fname + " " + lname + "!" + "<br>" + "You are now logged in.";
+      document.getElementById("usernameBankHeader").innerHTML = "Customer Name: " + fname + " " + lname + "<br>" + "Bank Account";
+
+      //Populate the Users balance
+      document.getElementById("balance").innerHTML = "Balance: $" + localStorage.getItem(username + "_balance");
+    } else {
+        //user did not log in to get to account page, so hide information and route user to login page to log in
+      document.getElementById("wrapper").style.display = "none";
+      window.location.replace("bankEZ_login.html");
+    }
+    
+
+    //Update the balance on the page
+    function updateBalance(){
+        var depositAmount = document.getElementById("deposit").value;
+        var withdrawAmount = document.getElementById("withdraw").value;
+
+        //Make sure user has entered a number greater than 0
+        if(depositAmount < 0){
+            alert("Negative numbers are not allowed in the deposit field");
+            return;
+        }
+        else if(withdrawAmount < 0){
+            alert("Negative numbers are not allowed in the withdraw field");
+            return;
+        }
+
+        //Update the balance
+        var balance = Number(localStorage.getItem(username + "_balance"));
+
+        //Dont allow the user to withdraw more money than they have in their account
+        if(balance < Number(withdrawAmount)){
+            alert("Withdraw amount cannot be greater than your balance");
+            return;
+        }
+
+        //Deposit and withdraw from balance
+        balance = balance + Number(depositAmount);  
+        balance = balance - Number(withdrawAmount);
+
+        //Update local storage and the page with the new balance
+        document.getElementById("balance").innerHTML = "Balance: $" + balance;
+        localStorage.setItem(username + "_balance", balance);
+
+        document.getElementById("deposit").value = "";
+        document.getElementById("withdraw").value = "";
+    }
+
+    function logOut(){
+        //Clear the session storage so there is no longer an active user
+        sessionStorage.clear();
+
+        //Send user to login page
+        window.location.replace("bankEZ_login.html");
+    }
+</script>
+<script src="script.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,106 @@
+/*footer*/
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  background-color: rgb(17, 182, 182);
+  /*background-image: linear-gradient(to bottom right, rgb(245, 46, 32),rgb(250, 217, 70), rgb(245, 46, 32));*/
+
+}
+.item2 { grid-area: social; }
+.item3 { grid-area: main; }
+.item4 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'social social social social social social'
+    'main main main main main main'
+    'footer footer footer footer footer footer';
+  gap: 10px;
+  padding: 5px;
+}
+
+.grid-container > div {
+  /*background-color: rgba(255, 255, 255, 0.8);*/
+  text-align: center;
+  padding: 4px 0;
+  font-size: 22px;
+}
+.item4>text {
+  font-size: 1.1rem;
+}
+.item3>text {
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 1.25rem;
+}
+
+/*social media buttons*/
+.fa-brands {
+  padding: 20px;
+  font-size: 25px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  text-decoration: none;
+  margin: 2px 3px;
+  border-radius: 50%;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+background: #3B5998;
+color: white;
+}
+
+.fa-twitter {
+background: #55ACEE;
+color: white;
+}
+
+.fa-google {
+background: #dd4b39;
+color: white;
+}
+
+.fa-linkedin {
+background: #007bb5;
+color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+
+/*media query*/
+@media screen and (max-width: 700px) {
+  .grid-container {
+  display: grid;
+  grid-template-areas:
+  'logo logo logo logo logo logo'
+  'social social social social social social'
+  'main main main main main main'
+  'footer footer footer footer footer footer';
+  gap: 10px;
+  background-color: rgb(17, 182, 182);
+  padding: 10px;  
+}
+
+.item3>text {
+  display: block;
+  font-size: 1.15rem;
+}
+#lotus_img {
+  width: 80px;
+}
+.item1>h3 {
+  display: none;
+}
+}

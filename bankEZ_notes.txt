@@ -1,0 +1,15 @@
+BankEZ Project
+Task list:
+
+- Add and clean up commments
+- Work on footer position - not working quite right on some pages, particularly on small viewing platform
+- Continue testing of functionality for registering/login/local storage/banking transaction
+- On Account Page, fix dead links
+- Add active, visited, hover state colors on links
+- Clean up CSS for different sections
+- Add online banking app to download mobile banking
+- Add Search button on right hand corner of topHeader
+- Add Bank Easy logo on left hand corner of topHeader
+- Add login button on body content for accessibility
+ 
+     

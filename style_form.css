@@ -1,0 +1,164 @@
+
+/*styling for tool tip */
+.tooltip {
+  position: relative;
+  display: inline;
+  top: 0px;
+  left: 4px;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 150px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0; 
+    /* position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 20px;
+    left: 75%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: medium;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+#tooltipfont {
+  font-size: 0.9rem;
+  display: block;
+}
+
+h1 {
+  color: #64532d;
+  font-weight: 900;
+}
+
+.container {
+  margin: auto;
+  margin-top: 60px;
+  width: 35%;
+  min-height: 45vh;
+  border: 1px solid lightgray;
+  border-radius: .1875rem;
+  padding: 2rem;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input[type="text"] {
+  border: 1px solid #b1adad;
+  border-radius: .1875rem;
+  font-size: .9rem;
+  padding: .8rem;
+  width: 100%;
+  margin-bottom: .6rem;
+  cursor: pointer;
+  display: inline-block;
+}
+input[type="password"] {
+  border: 1px solid #b1adad;
+  border-radius: .1875rem;
+  font-size: .9rem;
+  padding: .8rem;
+  width: 100%;
+  margin-bottom: .6rem;
+  cursor: pointer;
+  display: inline-block;
+}
+input[type="submit"] {
+  width: 100%;
+  background-color: #707570;
+  border: none;
+  border-radius: .1875rem;
+  color: #fff;
+  font-size: 1.3rem;
+  padding: .8rem;
+}
+label {
+  color: #661060;
+  font-size: 1.3rem;
+}
+
+/*for bankAccount page styling*/
+input[type="number"] {
+  border: 1px solid #b1adad;
+  border-radius: .1875rem;
+  font-size: .9rem;
+  padding: .8rem;
+  width: 100%;
+  margin-bottom: .6rem;
+  cursor: pointer;
+  display: inline-block;
+}
+
+#submitButton {
+  width: 100%;
+  background-color: #707570;
+  border: none;
+  border-radius: .1875rem;
+  color: #fff;
+  font-size: 1.3rem;
+  padding: .8rem;
+}
+#logOutButton {
+  width: 100%;
+  background-color: #dd752f;
+  border: none;
+  border-radius: .1875rem;
+  color: #fff;
+  font-size: 1.3rem;
+  padding: .8rem;
+}
+#message {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #555454;
+  font-size: .9rem;
+}
+ 
+input[type="email"] {
+border: 1px solid #555454;
+border-radius: .1875rem;
+font-size: .9rem;
+padding: .8rem;
+width: 100%;
+margin-bottom: .6rem;
+cursor: pointer;
+display: inline-block;
+}
+
+@media screen and (max-width: 1098px){
+  .container {
+    width: 60%;
+    }
+    h1 {
+      font-size: x-large;
+    }
+}
+
+@media screen and (max-width: 768px){
+  .container {
+    width: 80%;
+    }
+    h1 {
+      font-size: x-large;
+    }
+}
